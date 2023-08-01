@@ -14,4 +14,4 @@ services:
       - ./.meshrc.yaml:/app/.meshrc.yaml
     ports:
       - ${PORT}:4000
-    command: /bin/sh -c "yarn build && yarn start"
+    command: /bin/sh -c "printenv > .env && yarn build && yarn start"
