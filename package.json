@@ -1,0 +1,23 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "graphql gateway",
+  "private": true,
+  "scripts": {
+    "dev": "mesh dev",
+    "build": "mesh build",
+    "start": "tsx index.ts",
+    "docker:build": "docker compose --env-file .env -f docker-compose.yaml build mesh",
+    "docker:up": "docker compose --env-file .env -f docker-compose.yaml up -d mesh"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@graphql-mesh/graphql": "0.95.0",
+    "@graphql-mesh/transform-filter-schema": "0.95.0",
+    "@graphql-mesh/cli": "0.86.0",
+    "graphql": "^16.7.1"
+  },
+  "devDependencies": {
+    "tsx": "^3.12.7"
+  }
+}

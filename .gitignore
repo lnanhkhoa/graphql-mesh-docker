@@ -1,0 +1,4 @@
+node_modules/
+.mesh
+.meshrc.yaml
+.env

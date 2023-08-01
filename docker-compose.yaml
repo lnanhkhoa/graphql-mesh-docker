@@ -1,0 +1,17 @@
+version: "3"
+
+name: graphql-mesh
+services:
+  mesh:
+    image: lnanhkhoa/graphql-mesh
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: mesh
+    environment:
+      - API_BASEURL=${API_BASEURL}
+    volumes:
+      - ./.meshrc.yaml:/app/.meshrc.yaml
+    ports:
+      - ${PORT}:4000
+    command: /bin/sh -c "yarn build && yarn start"
