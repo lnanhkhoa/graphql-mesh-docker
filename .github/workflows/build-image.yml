@@ -2,8 +2,6 @@ name: "Build Docker Image and public version"
 
 on:
   push:
-    branches:
-      - main
     tags:
       - "v*"
 
