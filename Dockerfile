@@ -11,3 +11,4 @@ RUN yarn install
 FROM node:20-alpine as mesh
 COPY --from=mesh-min /app /app
 WORKDIR /app
+EXPOSE 4000
